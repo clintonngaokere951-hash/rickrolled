@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Nova Luxe Interiors — Transforming Spaces Into Beautiful Places</title>
-<meta name="description" content="Nova Luxe Interiors designs residential and commercial spaces with a refined, timeless touch. Book a consultation today.">
+<title>Book a Consultation — Nova Luxe Interiors</title>
+<meta name="description" content="Book your interior design consultation with Nova Luxe Interiors.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
 <style>
@@ -581,15 +581,15 @@
     .page-transition-overlay{ transition:none; display:none; }
   }
 </style>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init("IREwk_4X91dYyC6mT");</script>
 </head>
 <body>
 <div class="page-transition-overlay" id="pageTransition"></div>
 
-
-<!-- ================= HEADER ================= -->
-<header id="siteHeader">
+<header id="siteHeader" class="scrolled">
   <nav class="wrap">
-    <a href="#" class="logo-mark">NOVA <em>LUXE</em> INTERIORS</a>
+    <a href="index.html" class="logo-mark">NOVA <em>LUXE</em> INTERIORS</a>
     <div class="nav-links">
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
@@ -602,38 +602,52 @@
   </nav>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero">
-  <div class="curtain curtain-l"></div>
-  <div class="curtain curtain-r"></div>
-
-  <div class="hero-art" aria-hidden="true">
-    <svg viewBox="0 0 600 400" width="640" style="opacity:0.5;">
-      <line x1="60" y1="330" x2="540" y2="330" stroke="#c9a24b" stroke-width="1" opacity="0.5"/>
-      <path d="M120 330 L120 200 Q120 170 150 170 L190 170 Q220 170 220 200 L220 330" fill="none" stroke="#c9a24b" stroke-width="1"/>
-      <rect x="260" y="230" width="120" height="100" fill="none" stroke="#c9a24b" stroke-width="1"/>
-      <line x1="260" y1="260" x2="380" y2="260" stroke="#c9a24b" stroke-width="1"/>
-      <circle cx="440" cy="150" r="46" fill="none" stroke="#c9a24b" stroke-width="1"/>
-      <line x1="440" y1="196" x2="440" y2="330" stroke="#c9a24b" stroke-width="1"/>
-      <path d="M300 330 L300 120 M260 150 Q300 110 340 150" fill="none" stroke="#c9a24b" stroke-width="1"/>
-    </svg>
+<section class="page-hero">
+  <div class="wrap">
+    <div class="breadcrumb"><a href="index.html">Home</a> / <span>Book a Consultation</span></div>
+    <h1>Book Your <em>Consultation</em></h1>
+    <p>Tell us a little about your space and we'll be in touch within one business day.</p>
   </div>
-
-  <div class="hero-content">
-    <span class="hero-eyebrow">Residential &amp; Commercial Interior Design</span>
-    <h1 class="hero-title">Transforming Spaces<br>Into <em>Beautiful Places</em></h1>
-    <p class="hero-tagline">Timeless interiors, thoughtfully composed — from first sketch to final styling.</p>
-    <div class="hero-ctas">
-      <a href="portfolio.html" class="btn btn-outline">View Our Projects</a>
-      <a href="book-consultation.html" class="btn btn-solid">Book a Consultation</a>
-    </div>
-  </div>
-
-  <div class="scroll-cue"><span>Scroll</span><span class="line"></span></div>
 </section>
 
-<!-- ================= CONTACT / FOOTER ================= -->
-<footer id="contact">
+<section class="book-wrap">
+  <div class="wrap book-grid">
+    <div class="book-info">
+      <span class="eyebrow">What to Expect</span>
+      <h2 class="section-title">A No-Pressure <em>First Step</em></h2>
+      <p>Your consultation is a conversation, not a sales pitch. We'll talk through your space, your goals and your budget so we can tell you honestly whether — and how — we can help.</p>
+      <ul>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg> No obligation, no pressure — just a conversation</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg> In-home, showroom or virtual consultations available</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg> Response within 1 business day</li>
+        <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M9 12l2 2 4-4"/></svg> Prefer to talk now? Message us on WhatsApp instead</li>
+      </ul>
+    </div>
+    <form class="consult">
+      <div class="field"><label for="fname">Full Name</label><input id="fname" type="text" placeholder="Jane Appleseed" required></div>
+      <div class="field"><label for="fphone">Phone Number</label><input id="fphone" type="tel" placeholder="(555) 123-4567" required></div>
+      <div class="field"><label for="femail">Email Address</label><input id="femail" type="email" placeholder="jane@email.com" required></div>
+      <div class="field"><label for="flocation">Location</label><input id="flocation" type="text" placeholder="City / Neighbourhood"></div>
+      <div class="field"><label for="fproperty">Property Type</label>
+        <select id="fproperty"><option>Home / Apartment</option><option>Condo</option><option>Office / Commercial</option><option>New Build</option><option>Other</option></select>
+      </div>
+      <div class="field"><label for="fservice">Service Needed</label>
+        <select id="fservice"><option>Full Home Design</option><option>Single Room</option><option>Kitchen</option><option>Space Planning</option><option>Styling Only</option><option>Not Sure Yet</option></select>
+      </div>
+      <div class="field"><label for="fbudget">Estimated Budget</label>
+        <select id="fbudget"><option>Under $10,000</option><option>$10,000 – $25,000</option><option>$25,000 – $75,000</option><option>$75,000+</option></select>
+      </div>
+      <div class="field"><label for="fdate">Preferred Consultation Date</label><input id="fdate" type="date"></div>
+      <div class="field full"><label for="fmsg">Tell Us About Your Space</label><textarea id="fmsg" rows="3" placeholder="A few details about your project..."></textarea></div>
+      <div class="submit-row">
+        <button type="submit" class="submit-btn">Request Consultation</button>
+        <p class="form-note">By submitting, you agree to our <a href="privacy-policy.html">Privacy Policy</a>. We'll never share your information.</p>
+      </div>
+    </form>
+  </div>
+</section>
+
+<footer id="contact-footer">
   <div class="wrap">
     <div class="footer-grid">
       <div class="footer-col">
@@ -679,7 +693,6 @@
   </div>
 </footer>
 
-<!-- ================= WHATSAPP FLOAT ================= -->
 <a href="https://wa.me/2347082004658" class="wa-float" aria-label="Chat on WhatsApp" target="_blank" rel="noopener">
   <div class="wa-ring"></div>
   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 00-8.6 15L2 22l5.2-1.4A10 10 0 1012 2zm5.7 14.2c-.2.7-1.4 1.3-2 1.4-.5.1-1.1.1-1.8-.1-.4-.1-1-.3-1.6-.6-2.9-1.3-4.8-4.2-5-4.4-.1-.2-1.2-1.6-1.2-3s.7-2.1 1-2.4c.2-.3.5-.3.7-.3h.5c.2 0 .4 0 .6.5.2.5.7 1.8.8 1.9.1.1.1.3 0 .5-.1.2-.1.3-.3.5l-.4.5c-.1.2-.3.4-.1.7.2.3.9 1.5 1.9 2.4 1.3 1.2 2.4 1.5 2.7 1.7.3.2.5.1.7-.1l.6-.7c.2-.3.4-.2.7-.1.3.1 1.6.8 1.9.9.3.1.4.2.5.3.1.2.1.9-.1 1.6z"/></svg>
